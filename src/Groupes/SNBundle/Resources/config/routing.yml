@@ -1,0 +1,7 @@
+groupes_sn_groupe:
+    resource: "@GroupesSNBundle/Resources/config/routing/groupe.yml"
+    prefix:   /groupe
+
+groupes_sn_homepage:
+    path:     /
+    defaults: { _controller: GroupesSNBundle:Default:index }

@@ -1,0 +1,7 @@
+khairi_sn_esprit_competence:
+    resource: "@KhairiSNEspritBundle/Resources/config/routing/competence.yml"
+    prefix:   /competence
+
+khairi_sn_esprit_homepage:
+    path:     /
+    defaults: { _controller: KhairiSNEspritBundle:Default:index }

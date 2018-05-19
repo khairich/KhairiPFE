@@ -1,0 +1,31 @@
+competence_index:
+    path:     /
+    defaults: { _controller: "KhairiSNEspritBundle:Competence:index" }
+    methods:  GET
+
+competence_show:
+    path:     /{id}/show
+    defaults: { _controller: "KhairiSNEspritBundle:Competence:show" }
+    methods:  GET
+
+competence_new:
+    path:     /new
+    defaults: { _controller: "KhairiSNEspritBundle:Competence:new" }
+    methods:  [GET, POST]
+
+competence_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "KhairiSNEspritBundle:Competence:edit" }
+    methods:  [GET, POST]
+
+competence_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "KhairiSNEspritBundle:Competence:delete" }
+    methods:  DELETE
+   
+competence_recherche:
+    path:     /recherche
+    defaults: { _controller: "KhairiSNEspritBundle:Competence:Recherche" }
+    methods:  GET
+
+

@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Cv</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ cv.id }}</td>
+            </tr>
+            <tr>
+                <th>Firstname</th>
+                <td>{{ cv.firstName }}</td>
+            </tr>
+            <tr>
+                <th>Lastname</th>
+                <td>{{ cv.lastName }}</td>
+            </tr>
+            <tr>
+                <th>Birthday</th>
+                <td>{% if cv.birthday %}{{ cv.birthday|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ cv.email }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ cv.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ cv.image }}</td>
+            </tr>
+            <tr>
+                <th>Education</th>
+                <td>{{ cv.education }}</td>
+            </tr>
+            <tr>
+                <th>Projects</th>
+                <td>{{ cv.projects }}</td>
+            </tr>
+            <tr>
+                <th>Internship</th>
+                <td>{{ cv.internship }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cv_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('cv_edit', { 'id': cv.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

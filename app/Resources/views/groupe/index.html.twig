@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Groupes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Symfony</th>
+                <th>Java</th>
+                <th>Angular</th>
+                <th>Php</th>
+                <th>Html</th>
+                <th>C</th>
+                <th>Ajax</th>
+                <th>Css</th>
+                <th>Linux</th>
+                <th>J2ee</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for groupe in groupes %}
+            <tr>
+                <td><a href="{{ path('groupe_show', { 'id': groupe.id }) }}">{{ groupe.id }}</a></td>
+                <td>{% if groupe.symfony %}Yes{% else %}No{% endif %}</td>
+                <td>{% if groupe.java %}Yes{% else %}No{% endif %}</td>
+                <td>{% if groupe.angular %}Yes{% else %}No{% endif %}</td>
+                <td>{% if groupe.pHP %}Yes{% else %}No{% endif %}</td>
+                <td>{% if groupe.html %}Yes{% else %}No{% endif %}</td>
+                <td>{% if groupe.c %}Yes{% else %}No{% endif %}</td>
+                <td>{% if groupe.ajax %}Yes{% else %}No{% endif %}</td>
+                <td>{% if groupe.css %}Yes{% else %}No{% endif %}</td>
+                <td>{% if groupe.linux %}Yes{% else %}No{% endif %}</td>
+                <td>{% if groupe.j2EE %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('groupe_show', { 'id': groupe.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('groupe_edit', { 'id': groupe.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('groupe_new') }}">Create a new groupe</a>
+        </li>
+    </ul>
+{% endblock %}

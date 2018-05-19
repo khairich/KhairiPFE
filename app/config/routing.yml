@@ -1,0 +1,15 @@
+groupes_sn:
+    resource: "@GroupesSNBundle/Resources/config/routing.yml"
+    prefix:   /
+
+resume_sn:
+    resource: "@ResumeSNBundle/Resources/config/routing.yml"
+    prefix:   /
+
+khairi_sn_esprit:
+    resource: "@KhairiSNEspritBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix: /

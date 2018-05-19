@@ -1,0 +1,11 @@
+resume_sn_cv:
+    resource: "@ResumeSNBundle/Resources/config/routing/cv.yml"
+    prefix:   /cv
+
+cv_pdf:
+    path: /pdf/{id}
+    defaults: { _controller: ResumeSNBundle:Cv:PDF }
+
+resume_sn_homepage:
+    path:     /
+    defaults: { _controller: ResumeSNBundle:Default:index }
